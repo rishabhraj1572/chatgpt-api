@@ -172,7 +172,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($api_key)) {
             <button type="button" class="mcq-btn" onclick="insertMCQPrompt()">📌 MCQ Prompt</button>
             <textarea name="user_prompt" id="user_prompt" placeholder="Enter your prompt..."><?php echo htmlspecialchars($userInput); ?></textarea><br>
             
-            <input type="file" id="imageUpload" accept="image/*">
+            <input type="file" id="imageUpload" accept="image/*" capture="environment">
             <input type="hidden" name="image" id="imageInput">
             <img id="preview">
             <p>Paste an image using Ctrl+V or Attach an Image</p>
