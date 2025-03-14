@@ -172,11 +172,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($api_key)) {
             <button type="button" class="mcq-btn" onclick="insertMCQPrompt()">📌 MCQ Prompt</button>
             <textarea name="user_prompt" id="user_prompt" placeholder="Enter your prompt..."><?php echo htmlspecialchars($userInput); ?></textarea><br>
             
-            <label for="imageUpload" class="custom-file-upload">Attach a Picture</label>
-            <input type="file" id="imageUpload" accept="image/*">
+            <label for="attachImage" class="custom-file-upload">Attach a Picture</label>
+            <input type="file" id="attachImage" accept="image/*">
 
-            <label for="imageUpload" class="custom-file-upload">Click a Picture</label>
-            <input type="file" id="imageUpload" accept="image/*" capture="environment">
+            <label for="captureImage" class="custom-file-upload">Click a Picture</label>
+            <input type="file" id="captureImage" accept="image/*" capture="environment">
 
             <style>
             .custom-file-upload {
@@ -195,7 +195,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($api_key)) {
                 background-color: #0056b3;
             }
 
-            #imageUpload {
+            #attachImage,#captureImage {
                 display: none;
             }
             </style>
