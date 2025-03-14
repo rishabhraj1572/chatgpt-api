@@ -272,6 +272,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($api_key)) {
         }
     });
 
+
+    document.getElementById("attachImage").addEventListener("change", function(event) {
+        handleImageUpload(event.target.files[0]);
+    });
+
+    document.getElementById("captureImage").addEventListener("change", function(event) {
+        handleImageUpload(event.target.files[0]);
+    });
+
+    function handleImageUpload(file) {
+        if (file) {
+            let reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById("preview").src = e.target.result;
+                document.getElementById("preview").style.display = "block";
+                document.getElementById("imageInput").value = e.target.result; // Pass Base64 Data
+            };
+            reader.readAsDataURL(file);
+        }
+    }
     window.onload = function () {
     let apiKey = localStorage.getItem("apiKey");
     document.getElementById("api_key").value = apiKey || "";
