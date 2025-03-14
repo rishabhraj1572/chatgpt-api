@@ -218,7 +218,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($api_key)) {
         <div class="modal-content">
             <h3>Enter API Key</h3>
             <input type="text" id="apiKeyInput" placeholder="Enter API Key">
-            <p><a href="https://github.com/settings/personal-access-tokens" target="_blank">Get Token</a></p>
+            <p><a href="https://github.com/settings/personal-access-tokens" target="_blank">Get API Key</a></p>
             <button onclick="saveApiKey()">Save</button>
             <button onclick="closeSettings()">Cancel</button>
         </div>
