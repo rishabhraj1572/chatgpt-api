@@ -2,7 +2,7 @@
 FROM php:8.2-cli
 
 # Set working directory
-WORKDIR /var/www/html
+WORKDIR /var/www/html/api
 
 # Copy project files into the container
 COPY . .
