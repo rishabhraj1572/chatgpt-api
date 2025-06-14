@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($api_key)) {
     $api_url = 'https://models.inference.ai.azure.com/chat/completions';
 
     $payload = [
-        "model" => "gpt-4o",
+        "model" => "openai/gpt-4.1",
         "messages" => [[
             "role" => "user",
             "content" => [["type" => "text", "text" => "$userInput"]]
